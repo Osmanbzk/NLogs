@@ -50,8 +50,7 @@ namespace NLog.Controllers
 
 
                 while (yazi != null)
-                {
-                    yazi = sr.ReadLine();
+                {                    
                     word = yazi.Split(delimiterChars);
                     concatText = string.Empty;
                     Hatalar hata = new Hatalar();
@@ -78,6 +77,7 @@ namespace NLog.Controllers
                     }
                     hata.Aciklama = concatText;
                     hatalar.Add(hata);
+                    yazi = sr.ReadLine();
                 }
 
                 //Son yazı okunduktan sonra kullandıgımız nesneleri iade ettik.
